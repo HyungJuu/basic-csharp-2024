@@ -16,7 +16,7 @@
 	- OS 독립적인 새로운 틀을 제작시작(2022~) &rarr; .NET 5.0
 	- 2024년(현재) &rarr; .NET 8.0
 	- C/C++은 gcc 컴파일러, Java는 JDK, C#은 .NET 5.0 이상 필요
-	- 이제는 신규개발 시, .NET Framework는 사용하지 말것
+	- 이제는 신규개발 시, **.NET Framework는 사용하지 말것**
 
 - Hello, C#!
 	- Visual Studio 시작
@@ -61,7 +61,7 @@
 - 흐름제어
 	- C++과 동일
 	- if, switch, while, do~while, for, break, continue, goto 모두 동일
-	- C#에는 foreach가 존재 = Python의 for item in [] 과 동일
+	- **C#에는 foreach가 존재** = Python의 for item in [] 과 동일
 
 	```cs
 	int[] arr = { 1, 2, 3, 4, 5 };
@@ -74,8 +74,8 @@
 
 - 메서드(Method)
 	- 함수와 동일. 구조적 프로그래밍 &rarr; 함수, 객체지향 &rarr; 메서드(파이썬 예외)
-	- 매개변수 참조형식  
-		&rarr; C++에서 Pointer로 값을 사용할 때와 동일한 기능
+	- **매개변수 참조형식** 
+		&rarr; C++에서 Pointer로 값을 사용할 때와 동일한 기능, **키워드 ref**
 
 		```cs
 		public static void RefSwap(ref int a, ref int b)
@@ -90,7 +90,7 @@
 		```
 
 	- 매개변수 출력형식  
-		&rarr; 매개변수를 리턴값으로 사용하도록 대체해주는 방법(과도기적인 방법)
+		&rarr; 매개변수를 리턴값으로 사용하도록 대체해주는 방법(과도기적인 방법), **키워드 out**
 
 		```cs
 		// quotient : 나누기 몫
@@ -176,7 +176,7 @@
 	- 한꺼번에 여러개의 데이터를 리턴하거나 전달할 때 유용
 	- 값 할당 후 변경불가
 
-- 인터페이스 ★★
+- **인터페이스 ★★**
 	- 클래스 &rarr; 객체의 청사진 | 인터페이스 &rarr; 클래스의 청사진
 	- 클래스가 어떠한 메서드를 가져야 하는지를 약속하는 것
 	- 다중상속의 문제를 단일상속으로도 해결할 수 있도록 만든 주체
@@ -193,23 +193,75 @@
 	- Virtual 메서드하고도 유사
 	- 추상클래스 단순화 &rarr; 인터페이스
 
-- 프로퍼티
+- **프로퍼티**
 	- 클래스의 멤버변수 변형. 일반 변수와 유사
 	- 멤버변수의 접근제한자를 public으로 했을 때의 객체지향적 문제점(코드오염 등)을 해결하기 위해서
-	- GET 접근자 / SET 접근자
-	- SET은 값 할당시 잘못된 데이터가 들어가지 않도록 막아야 함
+	- get 접근자 / set 접근자
+	- set 값 할당시 잘못된 데이터가 들어가지 않도록 막아야 함
 	- Java에서는 Getter 메서드 / Setter 메서드로 사용
 
 ## 2일차 (24.04.12)
+- **TIP**
+	- C#에서 빌드 시 오류 : 프로세스 액세스 오류
+		- 원인 : 빌드하고자 하는 프로그램이 백그라운드 상에서 실행중이기 때문
+		- 해결 : **Ctrl + Shift + ESC(작업관리자)** &rarr; 해당 프로세스 작업 끝내기 &rarr; 재빌드
+
 - 컬렉션(배열, 리스트, 인덱서)
+	- 모든 배열은 System.Array 클래스를 상속한 하위 클래스
+	- 기본적인 배열의 사용법, Python 리스트와도 동일
+	- 배열 분할 : C# 8.0 &larr; 파이썬의 배열 슬라이스를 도입
+	- 컬렉션, 파이썬의 리스트, 스택, 큐, 딕셔너리와 동일
+		- ArrayList
+		- Stack
+		- Queue
+		- Hashtable(== Dictionary)
+	- yield : foreach를 사용할 수 있는 객체로 만들기
+
 - 일반화(Generic) 프로그래밍
+	- 파이썬 : 변수에 값을 넣을 때 제약사항 x
+	- 타입의 제약을 해소하고자 만든 기능 &rarr; ArrayList 등(단, 박싱(언방싱) 등 성능의 문제가 있음)
+	- **하나의 메서드로 여러 타입의 처리를 해줄 수 있는 프로그래밍 방식**
+	- 일반화 컬렉션
+		- List<T>
+		- Stack<T>, Queue<T>
+		- Dictionary<TKey, TValue>
+
 - 예외처리
+	- 소스코드 상 문법적 오류 : 오류(Error)
+	- 실행 중 생기는 오류 : 예외(Exception)
+
+	```cs
+	try
+	{
+		// .. 예외가 발생할 것 가은 소스코드
+	}
+	catch (Exception ex)
+	{	// 모든 예외클래스의 조상 = Exception(예: IndexOutOfRangeException)
+		// 어떤 예외클래스를 써야할지 모르면 무조건 Exception 클래스 사용
+		Console.WriteLine(ex.Message);
+	}
+	finally
+	{
+		// 예외발생 유무에 상관없이 항상 실행
+	}
+	```
+
 - 대리자와 이벤트
+	- 메서드 호출 히 매개변수 전달
+	- 대리자 호출 시 함수(메서드) 자체를 전달
+	- 이벤트 : 컴퓨터 내에서 발생하는 객체의 사건들
+	- delegate --> event
+
+- **TIP**
+	- C# 영역을 지정하여 관리할 수 있는 주석이 있음
+	- #region ~ #endregion : 영역을 Expend 또는 Collapse 가능
+	
 - 람다식
 - 애트리뷰트
 - dynamic 형식
 - Winform(파일, 스레드)
 - 가비지 컬렉션
 - 네트워크 프로그래밍
+
 - WPF
 - 예제 프로젝트
