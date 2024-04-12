@@ -247,21 +247,26 @@
 	```
 
 - 대리자와 이벤트
-	- 메서드 호출 히 매개변수 전달
+	- 메서드 호출 시 매개변수 전달
 	- 대리자 호출 시 함수(메서드) 자체를 전달
 	- 이벤트 : 컴퓨터 내에서 발생하는 객체의 사건들
-	- delegate --> event
+	- delegate &rarr; event
+	- 윈폼개발 &rarr; 이벤트기반(Event driven) 프로그래밍
 
 - **TIP**
 	- C# 영역을 지정하여 관리할 수 있는 주석이 있음
 	- #region ~ #endregion : 영역을 Expend 또는 Collapse 가능
 	
-- 람다식
-- 애트리뷰트
-- dynamic 형식
-- Winform(파일, 스레드)
-- 가비지 컬렉션
-- 네트워크 프로그래밍
+	![region주석](https://raw.githubusercontent.com/HyungJuu/basic-csharp-2024/main/images/cs002.png)
 
+## 3일차 (24.04.15)
+- 람다식
+- LINQ
+- 애트리뷰트
+- 파이썬 실행
+- Winform UI 개발 + 파일, 스레드
+- 가비지 컬렉션
+
+## 4일차
 - WPF
 - 예제 프로젝트
