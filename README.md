@@ -315,12 +315,22 @@
 		- ListView : Lsv-
 		- PictureBox : Pic-
 		- *Dialog : Dlg-
+		- RichTextBox : Rtx-
+
 
 ## 5일차
 - 윈폼 UI 개발(이어서)
 	- 스레드 추가
+		- 프로세스를 나누어 동시에 여러가지 진행
+		- 스레드 사용하기 불편함
+		- C# BackgroundWorker 클래스 추가(Thread를 사용하기 편하게 만든 클래스)
+
 	- 파일 입출력 추가
+		- 리치텍스트박스(like MSWord, 한글워드)로 파일저장
+
 	- 비동기 작업 앱
+		- 가장 트랜드가 되는 작업방법
+		
 	- 윈도우 탐색기 앱
 	- 도서관리 앱 with SQL Server
 	- ModernUI 앱
