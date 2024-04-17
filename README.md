@@ -330,7 +330,9 @@
 
 	- 비동기 작업 앱
 		- 가장 트랜드가 되는 작업방법
-		
+		- 백그라운드 처리는 Thread, BackgroundWorkder와 유사
+		- async, await 키워드
+
 	- 윈도우 탐색기 앱
 	- 도서관리 앱 with SQL Server
 	- ModernUI 앱
