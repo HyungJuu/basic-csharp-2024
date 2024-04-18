@@ -41,6 +41,8 @@ namespace My_project
             Btn_Cancel = new Button();
             comboBox1 = new ComboBox();
             label5 = new Label();
+            hidePanel1 = new HidePanel();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // Txt_Name
@@ -125,6 +127,7 @@ namespace My_project
             // panel1
             // 
             panel1.BackColor = Color.Beige;
+            panel1.Controls.Add(hidePanel1);
             panel1.Dock = DockStyle.Left;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -158,6 +161,17 @@ namespace My_project
             label5.TabIndex = 11;
             label5.Text = "성별 :";
             // 
+            // hidePanel1
+            // 
+            hidePanel1.Location = new Point(0, 0);
+            hidePanel1.Name = "hidePanel1";
+            hidePanel1.Opacity = 50;
+            hidePanel1.Size = new Size(557, 30);
+            hidePanel1.TabIndex = 12;
+            hidePanel1.MouseDown += hidePanel1_MouseDown;
+            hidePanel1.MouseMove += hidePanel1_MouseMove;
+            hidePanel1.MouseUp += hidePanel1_MouseUp;
+            // 
             // Signup
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -181,6 +195,7 @@ namespace My_project
             Name = "Signup";
             StartPosition = FormStartPosition.CenterParent;
             Text = "회원가입";
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -200,5 +215,6 @@ namespace My_project
         private Button Btn_Cancel;
         private ComboBox comboBox1;
         private Label label5;
+        private HidePanel hidePanel1;
     }
 }

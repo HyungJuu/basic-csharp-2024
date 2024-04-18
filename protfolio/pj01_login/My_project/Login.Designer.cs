@@ -38,6 +38,7 @@ namespace My_project
             Btn_Login = new Button();
             Btn_Reset = new Button();
             panel1 = new Panel();
+            hidePanel1 = new HidePanel();
             Btn_signup = new Button();
             label5 = new Label();
             label4 = new Label();
@@ -53,7 +54,7 @@ namespace My_project
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("나눔고딕", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 129);
             label1.ForeColor = Color.Black;
-            label1.Location = new Point(68, 163);
+            label1.Location = new Point(72, 163);
             label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
             label1.Size = new Size(110, 24);
@@ -64,7 +65,7 @@ namespace My_project
             // 
             pictureBox1.BackColor = Color.Transparent;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(71, 57);
+            pictureBox1.Location = new Point(77, 57);
             pictureBox1.Margin = new Padding(2);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(101, 94);
@@ -139,6 +140,7 @@ namespace My_project
             // panel1
             // 
             panel1.BackColor = Color.Beige;
+            panel1.Controls.Add(hidePanel1);
             panel1.Controls.Add(Btn_signup);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(pictureBox1);
@@ -150,9 +152,20 @@ namespace My_project
             panel1.Size = new Size(247, 314);
             panel1.TabIndex = 9;
             // 
+            // hidePanel1
+            // 
+            hidePanel1.Location = new Point(0, 0);
+            hidePanel1.Name = "hidePanel1";
+            hidePanel1.Opacity = 50;
+            hidePanel1.Size = new Size(557, 30);
+            hidePanel1.TabIndex = 0;
+            hidePanel1.MouseDown += hidePanel1_MouseDown;
+            hidePanel1.MouseMove += hidePanel1_MouseMove;
+            hidePanel1.MouseUp += hidePanel1_MouseUp;
+            // 
             // Btn_signup
             // 
-            Btn_signup.Location = new Point(83, 269);
+            Btn_signup.Location = new Point(87, 269);
             Btn_signup.Name = "Btn_signup";
             Btn_signup.Size = new Size(75, 23);
             Btn_signup.TabIndex = 5;
@@ -163,7 +176,7 @@ namespace My_project
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(54, 251);
+            label5.Location = new Point(57, 251);
             label5.Name = "label5";
             label5.Size = new Size(137, 15);
             label5.TabIndex = 4;
@@ -193,7 +206,7 @@ namespace My_project
             // Btn_exit
             // 
             Btn_exit.Font = new Font("맑은 고딕", 9F, FontStyle.Bold, GraphicsUnit.Point, 129);
-            Btn_exit.Location = new Point(525, 8);
+            Btn_exit.Location = new Point(526, 8);
             Btn_exit.Name = "Btn_exit";
             Btn_exit.Size = new Size(23, 23);
             Btn_exit.TabIndex = 12;
@@ -208,6 +221,7 @@ namespace My_project
             BackColor = Color.White;
             ClientSize = new Size(557, 314);
             Controls.Add(Btn_exit);
+            Controls.Add(panel1);
             Controls.Add(checkBox1);
             Controls.Add(label4);
             Controls.Add(Btn_Reset);
@@ -216,7 +230,6 @@ namespace My_project
             Controls.Add(label2);
             Controls.Add(Txt_Password);
             Controls.Add(Txt_Username);
-            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(2);
@@ -225,9 +238,6 @@ namespace My_project
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             FormClosing += Login_FormClosing;
-            MouseDown += Login_MouseDown;
-            MouseMove += Login_MouseMove;
-            MouseUp += Login_MouseUp;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
@@ -247,8 +257,9 @@ namespace My_project
         private Panel panel1;
         private Label label4;
         private CheckBox checkBox1;
-        private Button Btn_exit;
         private Label label5;
         private Button Btn_signup;
+        private HidePanel hidePanel1;
+        private Button Btn_exit;
     }
 }

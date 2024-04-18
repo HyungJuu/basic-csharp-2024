@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace My_project
 {
+
     public partial class Signup : Form
     {
         public Signup()
@@ -29,12 +30,47 @@ namespace My_project
 
         }
 
+        private bool isOpeningAnotherForm = false;
+
         // 취소버튼 이벤트핸들러
         private void Btn_Cancel_Click(object sender, EventArgs e)
         {
+            //Login relogin = new Login();
+            //relogin.ShowDialog();
+            //this.Close();
+            //this.Hide();
+            isOpeningAnotherForm = true;
             Login relogin = new Login();
-            relogin.Show();
-            this.Close();
+            relogin.FormClosed += (s, args) => isOpeningAnotherForm = false;
+            relogin.ShowDialog();
         }
+
+        #region '창 이동'
+
+        bool TagMove;
+        int MValX, MValY;
+        
+        private void hidePanel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            TagMove = true;
+            MValX = e.X;
+            MValY = e.Y;
+        }
+
+        private void hidePanel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (TagMove == true)
+            {
+                this.SetDesktopLocation(MousePosition.X - MValX, MousePosition.Y - MValY);
+            }
+        }
+
+        private void hidePanel1_MouseUp(object sender, MouseEventArgs e)
+        {
+            TagMove = false;
+        }
+        #endregion
+
+
     }
 }
