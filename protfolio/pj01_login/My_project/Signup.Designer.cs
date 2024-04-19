@@ -73,7 +73,7 @@ namespace My_project
             // 
             // Btn_Ok
             // 
-            Btn_Ok.Location = new Point(352, 273);
+            Btn_Ok.Location = new Point(377, 269);
             Btn_Ok.Name = "Btn_Ok";
             Btn_Ok.Size = new Size(75, 23);
             Btn_Ok.TabIndex = 3;
@@ -147,7 +147,7 @@ namespace My_project
             // 
             // Btn_Cancel
             // 
-            Btn_Cancel.Location = new Point(442, 273);
+            Btn_Cancel.Location = new Point(458, 269);
             Btn_Cancel.Name = "Btn_Cancel";
             Btn_Cancel.Size = new Size(75, 23);
             Btn_Cancel.TabIndex = 9;

@@ -30,6 +30,7 @@ namespace My_project
 
         }
 
+        #region '입력초기화'
         // 입력초기화버튼 이벤트핸들러
         private void Btn_Reset_Click(object sender, EventArgs e)
         {
@@ -38,10 +39,9 @@ namespace My_project
 
             Txt_Username.Focus();
         }
+        #endregion
 
-        private bool isOpeningAnotherForm = false;
-        private bool isClosing = false;
-
+        #region '창닫기 관련 이벤트핸들러'
         // 창닫기버튼 이벤트핸들러
         private void Btn_exit_Click(object sender, EventArgs e)
         {
@@ -55,7 +55,9 @@ namespace My_project
 
             if (res == DialogResult.No) e.Cancel = true;
         }
+        #endregion
 
+        #region '회원가입'
         // 회원가입버튼
         private void Btn_signup_Click(object sender, EventArgs e)
         {
@@ -64,6 +66,7 @@ namespace My_project
             signup.Show();
             this.Hide();
         }
+        #endregion
 
         #region '창 이동'
 

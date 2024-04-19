@@ -30,14 +30,14 @@ namespace My_project
 
         }
 
-        private bool isOpeningAnotherForm = false;
-
+        #region '취소버튼'
         // 취소버튼 이벤트핸들러
         private void Btn_Cancel_Click(object sender, EventArgs e)
         {
             this.Show();
             this.Close();
         }
+        #endregion
 
         #region '창 이동'
 
