@@ -7,11 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MetroFramework.Forms;
 
 namespace My_project
 {
 
-    public partial class Signup : Form
+    public partial class Signup : MetroForm
     {
         public Signup()
         {
@@ -39,11 +40,12 @@ namespace My_project
         }
         #endregion
 
+        // 필요없어짐
         #region '창 이동'
 
         bool TagMove;
         int MValX, MValY;
-        
+
         private void hidePanel1_MouseDown(object sender, MouseEventArgs e)
         {
             TagMove = true;
@@ -63,8 +65,13 @@ namespace My_project
         {
             TagMove = false;
         }
-        #endregion
+        #endregion 
 
 
+        // 성별선택 이벤트핸들러
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

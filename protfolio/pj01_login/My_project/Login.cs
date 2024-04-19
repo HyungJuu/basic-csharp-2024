@@ -1,6 +1,9 @@
+using MetroFramework.Forms;
+using System.Windows.Forms;
+
 namespace My_project
 {
-    public partial class Login : Form
+    public partial class Login : MetroForm
     {
         #region '생성자 초기화 영역'
 
@@ -27,7 +30,9 @@ namespace My_project
         // 로그인 버튼클릭 이벤트핸들러
         private void Btn_Login_Click(object sender, EventArgs e)
         {
-
+            Form mainform = new Form();
+            mainform.ShowDialog();
+            mainform.Hide();
         }
 
         #region '입력초기화'
@@ -46,6 +51,7 @@ namespace My_project
         private void Btn_exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
+            //Environment.Exit(0);
         }
 
         // 창을 닫을시 종료여부 질문창
@@ -68,6 +74,7 @@ namespace My_project
         }
         #endregion
 
+        // 필요없어짐
         #region '창 이동'
 
         // 창 이동
@@ -95,6 +102,39 @@ namespace My_project
         }
         #endregion
 
+        #region '비밀번호 표시유무'
+        // 비밀번호 표시 이벤트핸들러
+        private void ChkShow_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (ChkShow.Checked)
+            {
+                Txt_Password.PasswordChar = '\0';
+            }
+            else
+            {
+                Txt_Password.PasswordChar = '●';
+            }
+        }
+ 
+        #endregion
+
+        #region '엔터키로 이동'
+        private void Txt_Password_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13) // 13 : 엔터키
+            {
+                Btn_Login_Click(sender, e);
+            }
+        }
+
+        private void Txt_Username_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
+            {
+                Txt_Password.Focus();
+            }
+        }
+        #endregion
 
     }
 }
