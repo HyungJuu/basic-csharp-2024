@@ -351,7 +351,7 @@
 	- 윈도우 탐색기 앱 종료
 		- 실행결과
 
-		https://github.com/HyungJuu/basic-csharp-2024/assets/158007420/bb328e98-deb0-462e-ad3b-5cb8590bf73f
+		https://github.com/HyungJuu/basic-csharp-2024/assets/158007420/c59da185-f6ca-48da-9055-1068d05b1878
 
 	- 도서관리 앱 with SQL Server (Base) ModernUI(NuGet패키지)
 	
