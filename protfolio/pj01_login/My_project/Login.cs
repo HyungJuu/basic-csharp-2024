@@ -51,34 +51,18 @@ namespace My_project
         // 창을 닫을시 종료여부 질문창
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //var res = MessageBox.Show("정말 종료하시겠습니까?", "종료여부", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            var res = MessageBox.Show("정말 종료하시겠습니까?", "종료여부", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            //if (res == DialogResult.No) e.Cancel = true;
-            if (!isOpeningAnotherForm && e.CloseReason == CloseReason.UserClosing && !isClosing)
-            {
-                isClosing = true; // 종료 여부를 묻는 중임을 표시
-
-                var res = MessageBox.Show("정말 종료하시겠습니까?", "종료여부", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                if (res == DialogResult.No)
-                {
-                    e.Cancel = true;
-                    isClosing = false;
-
-                }
-            }
+            if (res == DialogResult.No) e.Cancel = true;
         }
+
         // 회원가입버튼
         private void Btn_signup_Click(object sender, EventArgs e)
         {
-            //Signup signup = new Signup();
-            //signup.ShowDialog();
-            //this.Close();
-            //this.Hide();
-            isOpeningAnotherForm = true;
             Signup signup = new Signup();
-            signup.FormClosed += (s, args) => isOpeningAnotherForm = false;
-            signup.ShowDialog();
+            signup.FormClosed += (s, args) => this.Show();
+            signup.Show();
+            this.Hide();
         }
 
         #region '창 이동'

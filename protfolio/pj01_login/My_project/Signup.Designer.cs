@@ -38,10 +38,10 @@ namespace My_project
             label4 = new Label();
             Txt_phone = new TextBox();
             panel1 = new Panel();
+            hidePanel1 = new HidePanel();
             Btn_Cancel = new Button();
             comboBox1 = new ComboBox();
             label5 = new Label();
-            hidePanel1 = new HidePanel();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -134,6 +134,17 @@ namespace My_project
             panel1.Size = new Size(247, 314);
             panel1.TabIndex = 8;
             // 
+            // hidePanel1
+            // 
+            hidePanel1.Location = new Point(0, 0);
+            hidePanel1.Name = "hidePanel1";
+            hidePanel1.Opacity = 50;
+            hidePanel1.Size = new Size(557, 30);
+            hidePanel1.TabIndex = 12;
+            hidePanel1.MouseDown += hidePanel1_MouseDown;
+            hidePanel1.MouseMove += hidePanel1_MouseMove;
+            hidePanel1.MouseUp += hidePanel1_MouseUp;
+            // 
             // Btn_Cancel
             // 
             Btn_Cancel.Location = new Point(442, 273);
@@ -161,17 +172,6 @@ namespace My_project
             label5.TabIndex = 11;
             label5.Text = "성별 :";
             // 
-            // hidePanel1
-            // 
-            hidePanel1.Location = new Point(0, 0);
-            hidePanel1.Name = "hidePanel1";
-            hidePanel1.Opacity = 50;
-            hidePanel1.Size = new Size(557, 30);
-            hidePanel1.TabIndex = 12;
-            hidePanel1.MouseDown += hidePanel1_MouseDown;
-            hidePanel1.MouseMove += hidePanel1_MouseMove;
-            hidePanel1.MouseUp += hidePanel1_MouseUp;
-            // 
             // Signup
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -193,7 +193,7 @@ namespace My_project
             Controls.Add(Txt_Name);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Signup";
-            StartPosition = FormStartPosition.CenterParent;
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "회원가입";
             panel1.ResumeLayout(false);
             ResumeLayout(false);

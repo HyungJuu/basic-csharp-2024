@@ -35,14 +35,8 @@ namespace My_project
         // 취소버튼 이벤트핸들러
         private void Btn_Cancel_Click(object sender, EventArgs e)
         {
-            //Login relogin = new Login();
-            //relogin.ShowDialog();
-            //this.Close();
-            //this.Hide();
-            isOpeningAnotherForm = true;
-            Login relogin = new Login();
-            relogin.FormClosed += (s, args) => isOpeningAnotherForm = false;
-            relogin.ShowDialog();
+            this.Show();
+            this.Close();
         }
 
         #region '창 이동'
