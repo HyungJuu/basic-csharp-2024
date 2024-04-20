@@ -10,6 +10,31 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 
+/*
+ 1. mssql에서 새 데이더베이스 생성 -> 데이터베이스 이름 입력하고 생성
+ 2. 생성한 데이터베이스 우클릭 -> 새 쿼리 선택
+
+CREATE TABLE signup(
+		username varchar(255) NOT Null,
+		userid varchar(255) NOT Null,
+		userpwd varchar(255) NOT Null,
+		userphone int NOT Null,
+		useremail varchar(255) Null
+);
+
+ -> signup이라는 테이블 생성
+
+이미 만든 테이블에 열을 추가하고싶다면
+
+ALTER TABLE dbo.signup
+ADD gender VARCHAR(20) DEFAULT ' ' NOT NULL;
+
+// 이미 생성된 테이블에 추가할때는 기본적으로 NULL값이 들어가기 때문에
+// NULL을 허용하고싶지 않다면 디폴트값을 지정해주면서 넣어준다
+
+ */
+
+
 namespace pj01_myproject
 {
     public partial class SignIN : MetroForm

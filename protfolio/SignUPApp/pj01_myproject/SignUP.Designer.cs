@@ -51,6 +51,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.Azure;
             this.panel1.Location = new System.Drawing.Point(23, 32);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(328, 395);
             this.panel1.TabIndex = 1;
@@ -58,9 +59,10 @@
             // Btn_Join
             // 
             this.Btn_Join.Location = new System.Drawing.Point(537, 379);
+            this.Btn_Join.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Join.Name = "Btn_Join";
             this.Btn_Join.Size = new System.Drawing.Size(95, 35);
-            this.Btn_Join.TabIndex = 6;
+            this.Btn_Join.TabIndex = 9;
             this.Btn_Join.Text = "완료";
             this.Btn_Join.UseVisualStyleBackColor = true;
             this.Btn_Join.Click += new System.EventHandler(this.Btn_Join_Click);
@@ -68,9 +70,10 @@
             // Btn_Cancel
             // 
             this.Btn_Cancel.Location = new System.Drawing.Point(651, 379);
+            this.Btn_Cancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Cancel.Name = "Btn_Cancel";
             this.Btn_Cancel.Size = new System.Drawing.Size(95, 35);
-            this.Btn_Cancel.TabIndex = 7;
+            this.Btn_Cancel.TabIndex = 10;
             this.Btn_Cancel.Text = "취소";
             this.Btn_Cancel.UseVisualStyleBackColor = true;
             this.Btn_Cancel.Click += new System.EventHandler(this.Btn_Cancel_Click);
@@ -127,7 +130,9 @@
             // 
             // Txt_UserName
             // 
+            this.Txt_UserName.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Txt_UserName.Location = new System.Drawing.Point(493, 75);
+            this.Txt_UserName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_UserName.Name = "Txt_UserName";
             this.Txt_UserName.Size = new System.Drawing.Size(241, 25);
             this.Txt_UserName.TabIndex = 1;
@@ -135,7 +140,9 @@
             // 
             // Txt_UserId
             // 
+            this.Txt_UserId.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Txt_UserId.Location = new System.Drawing.Point(493, 125);
+            this.Txt_UserId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_UserId.Name = "Txt_UserId";
             this.Txt_UserId.Size = new System.Drawing.Size(241, 25);
             this.Txt_UserId.TabIndex = 2;
@@ -143,7 +150,9 @@
             // 
             // Txt_UserPwd
             // 
+            this.Txt_UserPwd.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Txt_UserPwd.Location = new System.Drawing.Point(493, 175);
+            this.Txt_UserPwd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_UserPwd.Name = "Txt_UserPwd";
             this.Txt_UserPwd.Size = new System.Drawing.Size(241, 25);
             this.Txt_UserPwd.TabIndex = 3;
@@ -151,7 +160,9 @@
             // 
             // Txt_userPhone
             // 
+            this.Txt_userPhone.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Txt_userPhone.Location = new System.Drawing.Point(493, 225);
+            this.Txt_userPhone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_userPhone.Name = "Txt_userPhone";
             this.Txt_userPhone.Size = new System.Drawing.Size(241, 25);
             this.Txt_userPhone.TabIndex = 4;
@@ -159,7 +170,9 @@
             // 
             // Txt_UserEmail
             // 
+            this.Txt_UserEmail.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Txt_UserEmail.Location = new System.Drawing.Point(493, 275);
+            this.Txt_UserEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Txt_UserEmail.Name = "Txt_UserEmail";
             this.Txt_UserEmail.Size = new System.Drawing.Size(241, 25);
             this.Txt_UserEmail.TabIndex = 5;
@@ -178,9 +191,10 @@
             // 
             this.Chk_Woman.AutoSize = true;
             this.Chk_Woman.Location = new System.Drawing.Point(493, 335);
+            this.Chk_Woman.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Chk_Woman.Name = "Chk_Woman";
             this.Chk_Woman.Size = new System.Drawing.Size(44, 19);
-            this.Chk_Woman.TabIndex = 9;
+            this.Chk_Woman.TabIndex = 6;
             this.Chk_Woman.Text = "여";
             this.Chk_Woman.UseVisualStyleBackColor = true;
             this.Chk_Woman.CheckedChanged += new System.EventHandler(this.Chk_Woman_CheckedChanged);
@@ -189,9 +203,10 @@
             // 
             this.Chk_None.AutoSize = true;
             this.Chk_None.Location = new System.Drawing.Point(645, 335);
+            this.Chk_None.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Chk_None.Name = "Chk_None";
             this.Chk_None.Size = new System.Drawing.Size(89, 19);
-            this.Chk_None.TabIndex = 11;
+            this.Chk_None.TabIndex = 8;
             this.Chk_None.Text = "선택안함";
             this.Chk_None.UseVisualStyleBackColor = true;
             this.Chk_None.CheckedChanged += new System.EventHandler(this.Chk_None_CheckedChanged);
@@ -200,9 +215,10 @@
             // 
             this.Chk_Man.AutoSize = true;
             this.Chk_Man.Location = new System.Drawing.Point(569, 335);
+            this.Chk_Man.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Chk_Man.Name = "Chk_Man";
             this.Chk_Man.Size = new System.Drawing.Size(44, 19);
-            this.Chk_Man.TabIndex = 12;
+            this.Chk_Man.TabIndex = 7;
             this.Chk_Man.Text = "남";
             this.Chk_Man.UseVisualStyleBackColor = true;
             this.Chk_Man.CheckedChanged += new System.EventHandler(this.Chk_Man_CheckedChanged);
@@ -230,10 +246,14 @@
             this.Controls.Add(this.Btn_Cancel);
             this.Controls.Add(this.Btn_Join);
             this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "SignUP";
+            this.Padding = new System.Windows.Forms.Padding(21, 75, 21, 20);
             this.Resizable = false;
+            this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.Style = MetroFramework.MetroColorStyle.White;
             this.ResumeLayout(false);
             this.PerformLayout();
