@@ -50,6 +50,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Azure;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
@@ -63,41 +64,42 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 62);
+            this.pictureBox1.Location = new System.Drawing.Point(-6, 61);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(325, 149);
+            this.pictureBox1.Size = new System.Drawing.Size(308, 168);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
             this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("굴림", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label5.Location = new System.Drawing.Point(86, 223);
+            this.label5.Font = new System.Drawing.Font("굴림", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(-1, 230);
             this.label5.Name = "label5";
             this.label5.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.label5.Size = new System.Drawing.Size(163, 30);
+            this.label5.Size = new System.Drawing.Size(328, 30);
             this.label5.TabIndex = 12;
             this.label5.Text = "반갑습니다";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("굴림", 8.25F);
-            this.label4.Location = new System.Drawing.Point(88, 332);
+            this.label4.Location = new System.Drawing.Point(-1, 327);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(160, 14);
+            this.label4.Size = new System.Drawing.Size(328, 14);
             this.label4.TabIndex = 11;
             this.label4.Text = "기존회원이 아니신가요?";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Btn_SignUp
             // 
+            this.Btn_SignUp.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Btn_SignUp.Font = new System.Drawing.Font("굴림", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Btn_SignUp.Location = new System.Drawing.Point(118, 348);
+            this.Btn_SignUp.Location = new System.Drawing.Point(115, 346);
             this.Btn_SignUp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_SignUp.Name = "Btn_SignUp";
             this.Btn_SignUp.Size = new System.Drawing.Size(95, 35);
@@ -234,7 +236,6 @@
             this.Activated += new System.EventHandler(this.SignIN_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SignIN_FormClosing);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
