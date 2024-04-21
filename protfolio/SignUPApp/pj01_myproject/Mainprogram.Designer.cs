@@ -44,7 +44,7 @@
             // Btn_Exit
             // 
             this.Btn_Exit.Font = new System.Drawing.Font("나눔고딕 ExtraBold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.Btn_Exit.Location = new System.Drawing.Point(747, 15);
+            this.Btn_Exit.Location = new System.Drawing.Point(757, 11);
             this.Btn_Exit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Btn_Exit.Name = "Btn_Exit";
             this.Btn_Exit.Size = new System.Drawing.Size(30, 30);

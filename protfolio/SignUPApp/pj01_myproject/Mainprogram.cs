@@ -18,9 +18,14 @@ namespace pj01_myproject
             InitializeComponent();
         }
 
+        #region '창닫기'
+        // 창닫기 이벤트핸들러
         private void Btn_Exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
+        #endregion
+
+
     }
 }
