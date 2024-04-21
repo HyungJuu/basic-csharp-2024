@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SignUP));
             this.panel1 = new System.Windows.Forms.Panel();
             this.Btn_Join = new System.Windows.Forms.Button();
             this.Btn_Cancel = new System.Windows.Forms.Button();
@@ -45,11 +46,15 @@
             this.Chk_Woman = new System.Windows.Forms.CheckBox();
             this.Chk_None = new System.Windows.Forms.CheckBox();
             this.Chk_Man = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Azure;
+            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(23, 32);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
@@ -223,6 +228,16 @@
             this.Chk_Man.UseVisualStyleBackColor = true;
             this.Chk_Man.CheckedChanged += new System.EventHandler(this.Chk_Man_CheckedChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 69);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(328, 142);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // SignUP
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -255,6 +270,8 @@
             this.Resizable = false;
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.AeroShadow;
             this.Style = MetroFramework.MetroColorStyle.White;
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -279,5 +296,6 @@
         private System.Windows.Forms.CheckBox Chk_Woman;
         private System.Windows.Forms.CheckBox Chk_None;
         private System.Windows.Forms.CheckBox Chk_Man;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

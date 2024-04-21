@@ -66,7 +66,7 @@ namespace pj01_myproject
         private void Btn_SignIn_Click(object sender, EventArgs e)
         {
             bool isFail = false;
-            string errMsg = string.Empty;
+            string errMsg = string.Empty;   // 각 상황에 따른 문자열을 저장해서 상황에 맞춰 출력하려고 빈문자열을 선언
 
             if (string.IsNullOrEmpty(Txt_UserId.Text)) // 아이디를 입력하지 않았을 때
             {
@@ -91,7 +91,16 @@ namespace pj01_myproject
             }
 
             IsLogin = LoginProcess();
-            if (IsLogin) this.Close();
+            if (IsLogin) // 로그인에 성공하면 현재창(로그인창)을 숨기고 메인창을 연다
+            {
+                MessageBox.Show("로그인에 성공하였습니다", "성공", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+                Mainprogram mainprogram = new Mainprogram();
+                mainprogram.FormClosed += (s, args) => this.Hide(); // 메인폼을 닫았을 때 현재창을 숨김. Close()로 닫으려고 하니까 종료여부창이 두번출력됨
+                mainprogram.TopMost = true;
+                mainprogram.ShowDialog();
+            }
+
         }
 
         // 로그인 DB처리 시작
@@ -181,10 +190,10 @@ namespace pj01_myproject
         private void Btn_SignUp_Click(object sender, EventArgs e)
         {
             SignUP signup = new SignUP();
-            signup.FormClosed += (s, args) => this.Show();
+            signup.FormClosed += (s, args) => this.Show(); // 회원가입창을 닫을때 로그인창을 다시 띄우도록
             signup.TopMost = true;
             signup.ShowDialog();
-            //signup.Hide();
+            //signup.Hide(); // 원래 회원가입창을 열때 로그인창을 숨기려고 했는데 모달창으로 열어서 로그인창에 간섭하지 못하도록 바꿈
         }
 
         #endregion
