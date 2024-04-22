@@ -111,6 +111,7 @@
             this.MinimizeBox = false;
             this.Name = "FrmLogin";
             this.Resizable = false;
+            this.Style = MetroFramework.MetroColorStyle.Teal;
             this.Text = "로그인";
             this.ResumeLayout(false);
             this.PerformLayout();
