@@ -67,14 +67,17 @@ namespace NewBookRentalShopApp
             }
         }
 
-
         // 신규 클릭 이벤트핸들러
         private void BtnNew_Click(object sender, EventArgs e)
         {
             isNew = true;
             TxtBookIdx.Text = TxtAuthor.Text = string.Empty;
-            TxtBookIdx.ReadOnly = false; // 최초 입력할 때는 PK값을 입력해줘야 함
-            TxtBookIdx.Focus(); // 사용자번호는 자동증가 -> 입력불가
+            TxtAuthor.Focus(); // 사용자번호는 자동증가 -> 입력불가
+
+            CboDivision.SelectedIndex = -1;
+            TxtNames.Text = TxtISBN.Text = string.Empty;
+            DtpReleaseDate.Value = DateTime.Now;
+            NudPrice.Value = 0;
         }
 
         // 저장버튼 이벤트핸들러
@@ -111,14 +114,23 @@ namespace NewBookRentalShopApp
                     conn.Open();
 
                     var query = "";
+
                     if (isNew) // INSERT이면
                     {
-                        query = @"INSERT INTO divtbl
-                                            ( Division
-                                            , Names)
+                        query = @"INSERT INTO [dbo].[bookstbl]
+                                            ( [Author]
+                                            , [Division]
+                                            , [Names]
+                                            , [ReleaseDate]
+                                            , [ISBN]
+                                            , [Price])
                                        VALUES
-                                            (@Division
-                                            ,@Names)";
+                                            ( @Author
+                                            , @Division
+                                            , @Names
+                                            , @ReleaseDate
+                                            , @ISBN
+                                            , @Price)";
                     }
                     else // UPDATE
                     {
@@ -174,6 +186,12 @@ namespace NewBookRentalShopApp
                 MetroMessageBox.Show(this, $"오류 : {ex.Message}", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+            TxtBookIdx.Text = TxtAuthor.Text = string.Empty; // 입력, 수정, 삭제 이후에는 모든 입력값을 지운다.
+            CboDivision.SelectedIndex = -1;
+            TxtNames.Text = TxtISBN.Text = string.Empty;
+            DtpReleaseDate.Value = DateTime.Now;
+            NudPrice.Value = 0;
+
             RefreshData();
         }
 
@@ -181,9 +199,9 @@ namespace NewBookRentalShopApp
         // 삭제버튼 이벤트핸들러
         private void BtnDel_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(TxtBookIdx.Text)) // 구분코드가 없으면
+            if(string.IsNullOrEmpty(TxtBookIdx.Text)) // 책 번호가 없으면
             {
-                MetroMessageBox.Show(this, "삭제할 구분코드를 선택하세요.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MetroMessageBox.Show(this, "삭제할 책을 선택하세요.", "오류", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -193,11 +211,11 @@ namespace NewBookRentalShopApp
             using (SqlConnection conn = new SqlConnection(Helper.Common.ConnString))
             {
                 conn.Open();
-                var query = @"DELETE FROM divtbl WHERE Division = @Division ";
+                var query = @"DELETE FROM bookstbl WHERE bookIdx = @bookIdx ";
 
                 SqlCommand cmd = new SqlCommand(query, conn);
-                SqlParameter prmDivision = new SqlParameter("@Division", TxtBookIdx.Text);
-                cmd.Parameters.Add(prmDivision);
+                SqlParameter prmBookIdx = new SqlParameter("@bookIdx", TxtBookIdx.Text);
+                cmd.Parameters.Add(prmBookIdx);
 
                 var result = cmd.ExecuteNonQuery();
 
@@ -212,6 +230,11 @@ namespace NewBookRentalShopApp
                 }
             }
 
+            TxtBookIdx.Text = TxtAuthor.Text = string.Empty; // 입력, 수정, 삭제 이후에는 모든 입력값을 지운다.
+            CboDivision.SelectedIndex = -1;
+            TxtNames.Text = TxtISBN.Text = string.Empty;
+            DtpReleaseDate.Value = DateTime.Now;
+            NudPrice.Value = 0;
 
             RefreshData(); // 데이터그리드 재조회
         }
@@ -275,8 +298,6 @@ namespace NewBookRentalShopApp
                 // "20000" 가격을 숫자형으로 형변환
                 // 거의 모든 타입에 *.Parse(string) 메서드가 존재
                 NudPrice.Value = Decimal.Parse(selData.Cells[7].Value.ToString());
-
-                TxtBookIdx.ReadOnly = true; // UPDATE 시 PK 인 Division은 변경하면 안됨
 
                 // 콤보박스는 맨 마지막에
                 CboDivision.SelectedValue = selData.Cells[2].Value; // 구분코드로 선택 ★★★

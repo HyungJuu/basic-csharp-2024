@@ -114,6 +114,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -131,6 +132,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="books.ico" />
+    <Content Include="imgs\book.ico" />
+    <Content Include="imgs\book.png" />
+    <Content Include="imgs\division.ico" />
+    <Content Include="imgs\division.png" />
+    <Content Include="imgs\login.ico" />
+    <Content Include="imgs\login.png" />
+    <Content Include="imgs\member.ico" />
+    <Content Include="imgs\member.png" />
+    <Content Include="imgs\rental.ico" />
+    <Content Include="imgs\rental.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

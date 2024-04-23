@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBookDivision));
             this.DgvResult = new System.Windows.Forms.DataGridView();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.BtnDel = new MetroFramework.Controls.MetroButton();
             this.BtnSave = new MetroFramework.Controls.MetroButton();
@@ -39,37 +38,25 @@
             this.TxtDivision = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.panel1.SuspendLayout();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             ((System.ComponentModel.ISupportInitialize)(this.DgvResult)).BeginInit();
-            this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.DgvResult);
-            this.panel1.Location = new System.Drawing.Point(23, 63);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(375, 364);
-            this.panel1.TabIndex = 0;
             // 
             // DgvResult
             // 
             this.DgvResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvResult.Location = new System.Drawing.Point(0, 0);
             this.DgvResult.Name = "DgvResult";
             this.DgvResult.RowTemplate.Height = 23;
-            this.DgvResult.Size = new System.Drawing.Size(375, 364);
+            this.DgvResult.Size = new System.Drawing.Size(379, 370);
             this.DgvResult.TabIndex = 0;
             this.DgvResult.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvResult_CellClick);
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Location = new System.Drawing.Point(404, 63);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(373, 364);
-            this.panel2.TabIndex = 1;
             // 
             // groupBox1
             // 
@@ -80,10 +67,11 @@
             this.groupBox1.Controls.Add(this.TxtDivision);
             this.groupBox1.Controls.Add(this.metroLabel3);
             this.groupBox1.Controls.Add(this.metroLabel2);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(373, 364);
+            this.groupBox1.Size = new System.Drawing.Size(377, 370);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "책장르 입력항목";
@@ -202,30 +190,47 @@
             this.metroLabel2.Text = "구분코드";
             this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(20, 60);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.DgvResult);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
+            this.splitContainer1.Size = new System.Drawing.Size(760, 370);
+            this.splitContainer1.SplitterDistance = 379;
+            this.splitContainer1.TabIndex = 1;
+            // 
             // FrmBookDivision
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.splitContainer1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FrmBookDivision";
             this.Text = "책장르";
             this.Load += new System.EventHandler(this.FrmLoginUser_Load);
-            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DgvResult)).EndInit();
-            this.panel2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView DgvResult;
-        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox1;
         private MetroFramework.Controls.MetroButton BtnDel;
         private MetroFramework.Controls.MetroButton BtnSave;
@@ -234,5 +239,6 @@
         private MetroFramework.Controls.MetroTextBox TxtDivision;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }

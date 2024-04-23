@@ -106,6 +106,7 @@
             // 
             // MnuBookDivision
             // 
+            this.MnuBookDivision.Image = global::NewBookRentalShopApp.Properties.Resources.division;
             this.MnuBookDivision.Name = "MnuBookDivision";
             this.MnuBookDivision.Size = new System.Drawing.Size(180, 22);
             this.MnuBookDivision.Text = "책장르 관리";
@@ -113,6 +114,7 @@
             // 
             // MnuBookInfo
             // 
+            this.MnuBookInfo.Image = global::NewBookRentalShopApp.Properties.Resources.book;
             this.MnuBookInfo.Name = "MnuBookInfo";
             this.MnuBookInfo.Size = new System.Drawing.Size(180, 22);
             this.MnuBookInfo.Text = "책정보 관리";
@@ -120,6 +122,7 @@
             // 
             // MnuMembers
             // 
+            this.MnuMembers.Image = global::NewBookRentalShopApp.Properties.Resources.member;
             this.MnuMembers.Name = "MnuMembers";
             this.MnuMembers.Size = new System.Drawing.Size(180, 22);
             this.MnuMembers.Text = "도서회원 관리";
@@ -131,6 +134,7 @@
             // 
             // MnuBookRental
             // 
+            this.MnuBookRental.Image = global::NewBookRentalShopApp.Properties.Resources.rental;
             this.MnuBookRental.Name = "MnuBookRental";
             this.MnuBookRental.Size = new System.Drawing.Size(180, 22);
             this.MnuBookRental.Text = "대출 관리";
