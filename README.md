@@ -378,11 +378,17 @@
 		- 공통 클래스..
 		- 책장르 관리
 		- 책정보 관리
+
+## 10일차 (24.04.24)
+- 토이 프로젝트
+	- 도서관리 앱
 		- 도서회원 관리
 		- 대출 관리
-		- 프로그램 소개..
+		- 이 프로그램은..
 
-## 나머지
+		![책대여프로그램](https://raw.githubusercontent.com/HyungJuu/basic-csharp-2024/main/images/cs006.png)
+
+## 나머지(WPF / 미니프로젝트 시간 다시)
 - Pending
 	- IoT Dummy 앱 with SQL Server (IoT, DB)
 	- 국가교통정보센터 CCTV뷰 앱 (OpenAPI, NuGet dll, Network, UI디자인, 비동기메서드)

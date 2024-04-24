@@ -63,6 +63,7 @@ namespace NewBookRentalShopApp
             }
             catch (Exception ex)
             {
+                MessageBox.Show($"오류! : {ex.Message}", "경고", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             }
         }

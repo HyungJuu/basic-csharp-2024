@@ -51,6 +51,7 @@
             // 
             // DgvResult
             // 
+            this.DgvResult.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.DgvResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvResult.Location = new System.Drawing.Point(0, 0);
@@ -129,7 +130,6 @@
             this.TxtPassword.MaxLength = 32767;
             this.TxtPassword.Name = "TxtPassword";
             this.TxtPassword.PasswordChar = '●';
-            this.TxtPassword.PromptText = "패스워드 입력";
             this.TxtPassword.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TxtPassword.SelectedText = "";
             this.TxtPassword.SelectionLength = 0;
@@ -161,7 +161,6 @@
             this.TxtUserId.MaxLength = 32767;
             this.TxtUserId.Name = "TxtUserId";
             this.TxtUserId.PasswordChar = '\0';
-            this.TxtUserId.PromptText = "아이디 입력";
             this.TxtUserId.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TxtUserId.SelectedText = "";
             this.TxtUserId.SelectionLength = 0;

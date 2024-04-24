@@ -49,6 +49,7 @@
             // 
             // DgvResult
             // 
+            this.DgvResult.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.DgvResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvResult.Location = new System.Drawing.Point(0, 0);
@@ -125,7 +126,6 @@
             this.TxtNames.MaxLength = 32767;
             this.TxtNames.Name = "TxtNames";
             this.TxtNames.PasswordChar = '\0';
-            this.TxtNames.PromptText = "구분명 입력";
             this.TxtNames.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TxtNames.SelectedText = "";
             this.TxtNames.SelectionLength = 0;
@@ -157,7 +157,6 @@
             this.TxtDivision.MaxLength = 32767;
             this.TxtDivision.Name = "TxtDivision";
             this.TxtDivision.PasswordChar = '\0';
-            this.TxtDivision.PromptText = "구분코드 입력";
             this.TxtDivision.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TxtDivision.SelectedText = "";
             this.TxtDivision.SelectionLength = 0;

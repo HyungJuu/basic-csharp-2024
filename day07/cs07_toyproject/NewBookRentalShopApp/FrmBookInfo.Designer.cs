@@ -60,12 +60,13 @@
             // 
             // DgvResult
             // 
+            this.DgvResult.BackgroundColor = System.Drawing.Color.AliceBlue;
             this.DgvResult.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DgvResult.Location = new System.Drawing.Point(0, 0);
             this.DgvResult.Name = "DgvResult";
             this.DgvResult.RowTemplate.Height = 23;
-            this.DgvResult.Size = new System.Drawing.Size(378, 370);
+            this.DgvResult.Size = new System.Drawing.Size(379, 370);
             this.DgvResult.TabIndex = 0;
             this.DgvResult.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvResult_CellClick);
             // 
@@ -139,7 +140,6 @@
             this.TxtAuthor.MaxLength = 32767;
             this.TxtAuthor.Name = "TxtAuthor";
             this.TxtAuthor.PasswordChar = '\0';
-            this.TxtAuthor.PromptText = "저자명 입력";
             this.TxtAuthor.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TxtAuthor.SelectedText = "";
             this.TxtAuthor.SelectionLength = 0;
@@ -221,7 +221,6 @@
             this.TxtNames.MaxLength = 32767;
             this.TxtNames.Name = "TxtNames";
             this.TxtNames.PasswordChar = '\0';
-            this.TxtNames.PromptText = "책제목 입력";
             this.TxtNames.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TxtNames.SelectedText = "";
             this.TxtNames.SelectionLength = 0;
@@ -283,7 +282,6 @@
             this.TxtISBN.MaxLength = 32767;
             this.TxtISBN.Name = "TxtISBN";
             this.TxtISBN.PasswordChar = '\0';
-            this.TxtISBN.PromptText = "ISBN 입력";
             this.TxtISBN.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.TxtISBN.SelectedText = "";
             this.TxtISBN.SelectionLength = 0;
@@ -350,7 +348,7 @@
             this.groupBox1.Font = new System.Drawing.Font("나눔고딕", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(378, 370);
+            this.groupBox1.Size = new System.Drawing.Size(377, 370);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "책정보 입력항목";
@@ -369,7 +367,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
             this.splitContainer1.Size = new System.Drawing.Size(760, 370);
-            this.splitContainer1.SplitterDistance = 378;
+            this.splitContainer1.SplitterDistance = 379;
             this.splitContainer1.TabIndex = 2;
             // 
             // FrmBookInfo
